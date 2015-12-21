@@ -26,9 +26,9 @@ async.series([
   function(cb) {
     process.stdout.write('\nFirefox: Complete suite.\n\n');
     suite('firefox', 4444, cb);
-  }, 
+  } /*, 
   function(cb) {
     process.stdout.write('\nChrome: Complete suite.\n\n');
     suite('chrome', 4444, cb);
-  }
+  } */
 ]);

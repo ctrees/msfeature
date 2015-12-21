@@ -26,6 +26,8 @@ Intent: Create an npm module for use with mailservices DSL feature testing.
     - npm publish
 - push to github
 - turn on travis sync https://travis-ci.org/profile/ctrees
+- check travis status https://travis-ci.org/ctrees
+- check npm package https://www.npmjs.com/package/msfeature
 
 # Maintainers
 

@@ -11,8 +11,10 @@ function suite(browser, port, callback) {
   config.driver.desiredCapabilities.browserName = browser;
   config.driver.port = port;
   config.format = 'progress';
-//  config.tags = ['@wip'];
-//  config.tags = ['@fixme'];
+  /* Debugging Tags
+  config.tags = ['@wip'];
+  config.tags = ['@fixme'];
+  */
   config.tags = [];
 
   Cli.run(config, callback);
@@ -30,5 +32,7 @@ async.series([
   function(cb) {
     process.stdout.write('\nChrome: Complete suite.\n\n');
     suite('chrome', 4444, cb);
-  } */
+  } 
+  * Travis does not have chrome so run locally only 
+  */
 ]);

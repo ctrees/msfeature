@@ -24,6 +24,8 @@ Intent: Create an npm module for use with mailservices DSL feature testing.
 - Follow instructions: [Publish npm package](https://docs.npmjs.com/getting-started/publishing-npm-packages)
     - npm login
     - npm publish
+- push to github
+- turn on travis sync https://travis-ci.org/profile/ctrees
 
 # Maintainers
 

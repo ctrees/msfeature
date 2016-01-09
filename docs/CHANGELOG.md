@@ -1,4 +1,22 @@
 # CHANGELOG
+## Master (2016-01-09)
+* Added step: `/^I scroll to the element with id="([^"]*)"$/`
+* Added step: `/^I scroll down "([^"]*)" pixels$/`
+* Added step: `/^I scroll up "([^"]*)" pixels$/`
+* Added lib/step_definitions/ext/custom.js and test/features/scroll.feature for new steps
+* Mod lib/step_definitions/index.js and lib/step_definitions/index.js to include custom.js
+* Mod test/site/views/partials/compact-post.swig to include id to element for scroll target
+* Mod lib/step_definitions/ext/utility.js to remove previous mods for scroll feature (keep separation of customization of cucumber-mink)
+* Mod test/runner.js (revert wip)
+* Change isVisible method to isVisibleWithinViewport http://webdriver.io/api/state/isVisibleWithinViewport.html
+* Update this changelog docs/CHANGELOG.md
+* Update STEP.md with new DSL docs/STEP.md
+
+## Master (2015-12-20)
+* copied from branch https://github.com/Adezandee/cucumber-mink/tree/feature/angularjs-support
+* Created https://github.com/ctrees/msfeature from feature/angularjs-support
+* Cleanup README.md
+* Create docs/dev.md
 
 ## Master
 * Added step: `/^I send key "([^"]*)" in "([^"]*)" element$/`

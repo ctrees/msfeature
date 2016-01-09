@@ -241,4 +241,22 @@
       regex: /^I wait (\d+) seconds?$/
       description: Wait for X seconds.
       example: Then I wait 10 seconds
+      
+- title: Custom
+  methods:
+    - title: scrolltoid
+      regex: /^I scroll to the element with id="([^"]*)"$/
+      description: Scroll viewport to the element with id passed
+      example: When I scroll to the element with id="post30"
+
+    - title: scrollup
+      regex: /^I scroll down "([^"]*)" pixels$/
+      description: Scroll viewport down the number of pixels passed
+      example: When I scroll down "500" pixels
+
+    - title: scrolldown
+      regex: /^I scroll up "([^"]*)" pixels$/
+      description: Scroll viewport down the number of pixels passed
+      example: When I scroll up "500" pixels
+      
 	  

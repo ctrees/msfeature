@@ -6,6 +6,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+test/site/pace.js
 
 pids
 logs

@@ -6,7 +6,7 @@
 
 # Introduction
 
-msfeature is a [cucumber-js](https://github.com/cucumber/cucumber-js) step definition library with msDSL.
+[mfeature][github-url] is a [cucumber-js](https://github.com/cucumber/cucumber-js) step definition library with msDSL.
 
 Run your test with any Selenium browser: Phantomjs, Chrome, Firefox, IE
 
@@ -83,7 +83,7 @@ Run your tests
 ``` bash
 $ cucumber-js --require features/support/msfeatureconf.js
 ```
-
+[github-url]: https://github.com/ctrees/msfeature
 [npm-image]: https://img.shields.io/npm/v/msfeature.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/msfeature
 [travis-image]: https://img.shields.io/travis/ctrees/msfeature.svg?style=flat

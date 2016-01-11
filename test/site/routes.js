@@ -39,6 +39,13 @@ Routes.generate = function(request, reply) {
   reply.view('index', {'posts': postsGen(number)});
 };
 
+Routes.delay = function(request, reply) {
+  var number = parseInt(encodeURIComponent(request.params.number));
+  setTimeout(function(){
+    reply.view('index', {'posts': postsGen(20)});
+  }, number);
+};
+
 Routes.post = function(request, reply) {
   var id = encodeURIComponent(request.params.id);
   reply.view('post', {'post': postWithId(id)});
@@ -62,6 +69,10 @@ Routes.keys = function(request, reply) {
 
 Routes.angular = function(request, reply) {
   reply.view('angular');
+};
+
+Routes.pace = function(request, reply) {
+  reply.view('pace');
 };
 
 Routes.angularData = function(request, reply) {

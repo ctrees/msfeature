@@ -15,7 +15,7 @@ function suite(browser, port, callback) {
   config.tags = ['@fixme'];
     config.tags = [];
   */
-//  config.tags = ['@wip'];
+  config.tags = ['@wip'];
 
   Cli.run(config, callback);
 }
@@ -24,15 +24,15 @@ async.series([/*
   function(cb) {
     process.stdout.write('\nPhantomJS: Complete suite.\n\n');
     suite('phantomjs', 8910, cb);
-  },*/
+  },
   function(cb) {
     process.stdout.write('\nFirefox: Complete suite.\n\n');
     suite('firefox', 4444, cb);
-  } /*, 
+  }, */
   function(cb) {
     process.stdout.write('\nChrome: Complete suite.\n\n');
     suite('chrome', 4444, cb);
-  } 
+  }  /*
   * Travis does not have chrome so run locally only 
   */
 ]);

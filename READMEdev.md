@@ -34,10 +34,22 @@ test/spec - the unit tests
     1. THIS is a user UI/UX [DSL] improvement as the animation is there to give feedback to the user to WAIT for page to load... this is alignment of the [DSL] to the expected user UX/UI
 1. Feature Replacement GOAL: Replace step 'And I wait x seconds' with 'When the Page is ready'
     1. First Create a test that Fails
-    1. SO... pull [msfeature] and setup for [msfeature dev](#dev-test) 
-        
-    1. NOW we add [pace.js] to the test/site server
+    1. SO... pull [msfeature] and setup for [msfeature dev](#dev-test)
+    1. Create new feature file [pace.feature]
+    1. catmini:msfeature cat$ npm test
+    1. Should get test of [pace.feature]
+    1. NOW we add [pace.js] test page to the test/site server
     1. Add route to line 24 and 25 to test/site/server.js
+    1. Add [pace.js] to test/site/pace.js
+    1. Add [pace.css] to test/site/pace-theme-center-simple.css
+    1. Add the pace view to test/site/routes.js
+    1. Add the view to test/site/views/pace.swig which is the page we will test
+    1. Go view the test page: http://localhost:3000/pace
+    1. Now, to simulate a slow page... we setup a page request that take a delay as a param
+    1. Add the delay route to test/site/server.js
+    1. Add the delay code to test/site/routes.js
+    1. I uncommented the @wip tag in test/runner.js (so just test @wip features)
+    1. npm test
 
 ## General Structure and Principles
 1. The goal of [msfeature] is to create [DSL] specific for [Mail Services, LLC]
@@ -53,7 +65,8 @@ test/spec - the unit tests
 [codeclimate]: https://codeclimate.com/
 [travis]: https://travis-ci.org/
 [cucumber-mink]: https://github.com/ctrees/cucumber-mink
-[community cucumber-mink]: https://github.com/Adezandee/cucumber-mink
+[community cucumber-mink]: http://cucumber-mink.js.org/
+[cucumber-mink steps]: http://cucumber-mink.js.org/steps
 [webdriver]: http://webdriver.io/api.html
 [JsonWireProtocol]: https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol
 [W3C browser]: https://w3c.github.io/webdriver/webdriver-spec.html
@@ -61,3 +74,5 @@ test/spec - the unit tests
 [protractor]: https://github.com/angular/protractor
 [browser.waitForAngular()]: https://github.com/angular/protractor/blob/9144494a28dac5a0409de4c5384e933f2d2f8156/spec/plugins/specs/browser_get_wait_spec.js
 [pace.js]: https://github.com/HubSpot/pace
+[pace.css]: http://github.hubspot.com/pace/docs/welcome/
+[pace.feature]: https://github.com/ctrees/msfeature/blob/master/test/features/pace.feature

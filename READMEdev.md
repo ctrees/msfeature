@@ -50,12 +50,15 @@ test/spec - the unit tests
     1. Add the delay code to test/site/routes.js
     1. I uncommented the @wip tag in test/runner.js (so just test @wip features)
     1. npm test
+    1. tweak test/features/pace.feature [pace.feature] and test/site/views/pace.swig [pace.swig]
+1. Extend the msfeatures api
 
 ## General Structure and Principles
-1. The goal of [msfeature] is to create [DSL] specific for [Mail Services, LLC]
+1. The goal of [msfeature] is to create a [DSL] specific for [Mail Services, LLC]
 1. [msfeature] is a hack of [cucumber-mink] a fork of [community cucumber-mink] 
 1. [msfeature] uses [webdriver] to communicate over [JsonWireProtocol] to a [W3C browser]
 1. [msfeature] is driven by a feature text file in [cucumber] language
+1. [msfeature] contains [msDSL] a [cucumber-mink] extention example: [ 
 
 [msfeature]: https://github.com/ctrees/msfeature
 [msfeature dev]: https://github.com/ctrees/msfeature/blob/master/READMEdev.md
@@ -76,3 +79,4 @@ test/spec - the unit tests
 [pace.js]: https://github.com/HubSpot/pace
 [pace.css]: http://github.hubspot.com/pace/docs/welcome/
 [pace.feature]: https://github.com/ctrees/msfeature/blob/master/test/features/pace.feature
+[pace.swig]: https://github.com/ctrees/msfeature/blob/master/test/site/views/pace.swig

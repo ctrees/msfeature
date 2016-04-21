@@ -22,11 +22,12 @@
     load(500);
     load(1000);
     load(2000);  
+    load(3000);    
     setTimeout(function(){
       Pace.ignore(function(){
-        load(2100);
+        load(3100);
       });
-    }, 2500);
+    }, 3000);
     Pace.on('hide', function(){
       console.log('done');
     });
@@ -34,7 +35,7 @@
 </head>
 <body>
     <h1>Pace Test</h1>
-    <p>Pace should inject a div that displays a progress bar for 2 seconds then become invisable.  This page is requesting delay responce pages from /delay/number where number is the delay and milliseconds and the number of post in the response text.</p>
+    <p>Pace should inject a div that displays a progress bar for 3 seconds then become invisible.  This page is requesting delay responce pages from /delay/number where number is the delay and milliseconds and the number of post in the response text.</p>
 </body>
 </html>
 {% endraw %}

@@ -51,7 +51,22 @@ test/spec - the unit tests
     1. I uncommented the @wip tag in test/runner.js (so just test @wip features)
     1. npm test
     1. tweak test/features/pace.feature [pace.feature] and test/site/views/pace.swig [pace.swig]
-1. Extend the msfeatures api
+1. Review the [protractor] client js pattern
+    1. Now we've got a target event to listen withing the client side JS [pase.js] lets create a feature like [browser.waitForAngular()]
+    1. Looking at [protractor] structure [functions.waitForAngular()] we may want to concider just adopting the protractor framework for passing client side functions.
+    1. At Line 696 (the bottom) of [functions.waitForAngular()] we see how protrator exports client side scripts
+    1. At Line 350 of [protractor.prototype.waitForAngular] we see how protractor pulls in and uses [functions.waitForAngular()]
+1. Review the [msfeature] methods pattern
+    1. To Do ?? if helpfull ??
+1. Extend the [msfeature] api using [protractor] style client js event listener to gate client-side testing flow
+    1. [msfeature] uses [webdriverio] package where [protractor] uses [selenium-webdriver] 
+    1. [msfeature] uses [webdriverio] and adds the methods as prototypes in the driver/methods directory tree
+    1. To extend client executed code a reasonable place would be to add a new method would be lib/driver/methods
+    1. See [cucumber-mink Issue 26] which leads to [cucumber-mink feature/angularjs-support]
+    1. So we want to add new method waitForPace.js that looks like waitForAngular.js
+    1. Enable and start testing waitForAngular to verify code works
+    1. Push this commit with comment "waitForAngular test changes"
+    1. next step
 
 ## General Structure and Principles
 1. The goal of [msfeature] is to create a [DSL] specific for [Mail Services, LLC]
@@ -69,13 +84,19 @@ test/spec - the unit tests
 [travis]: https://travis-ci.org/
 [cucumber-mink]: https://github.com/ctrees/cucumber-mink
 [community cucumber-mink]: http://cucumber-mink.js.org/
+[cucumber-mink Issue 26]: https://github.com/Adezandee/cucumber-mink/issues/26
+[cucumber-mink feature/angularjs-support]: https://github.com/Adezandee/cucumber-mink#feature/angularjs-support
 [cucumber-mink steps]: http://cucumber-mink.js.org/steps
 [webdriver]: http://webdriver.io/api.html
+[webdriverio]: https://www.npmjs.com/package/webdriverio
 [JsonWireProtocol]: https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol
 [W3C browser]: https://w3c.github.io/webdriver/webdriver-spec.html
 [cucumber]: https://cucumber.io/
 [protractor]: https://github.com/angular/protractor
+[selenium-webdriver]: https://www.npmjs.com/package/selenium-webdriver
 [browser.waitForAngular()]: https://github.com/angular/protractor/blob/9144494a28dac5a0409de4c5384e933f2d2f8156/spec/plugins/specs/browser_get_wait_spec.js
+[functions.waitForAngular()]: https://github.com/angular/protractor/blob/9144494a28dac5a0409de4c5384e933f2d2f8156/lib/clientsidescripts.js
+[protractor.prototype.waitForAngular]: https://github.com/angular/protractor/blob/9144494a28dac5a0409de4c5384e933f2d2f8156/lib/protractor.js 
 [pace.js]: https://github.com/HubSpot/pace
 [pace.css]: http://github.hubspot.com/pace/docs/welcome/
 [pace.feature]: https://github.com/ctrees/msfeature/blob/master/test/features/pace.feature

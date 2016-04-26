@@ -78,5 +78,5 @@ Routes.pace = function(request, reply) {
 Routes.angularData = function(request, reply) {
   setTimeout(function() {
     reply('OK !');
-  }, 1000);
+  }, 1500);
 };

@@ -4,7 +4,7 @@ Feature: I can use cucumber to test an pace.js progress bar
     Given I browse "http://localhost:3000/"
     And I am on "/pace"
     
-  @wip
+  # @wip
   Scenario: See progress bar become invisible
     Then I should see 4 "div" element
     And I wait 2 seconds  

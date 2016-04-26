@@ -65,7 +65,16 @@ test/spec - the unit tests
     1. See [cucumber-mink Issue 26] which leads to [cucumber-mink feature/angularjs-support]
     1. So we want to add new method waitForPace.js that looks like waitForAngular.js
     1. Enable and start testing waitForAngular to verify code works
-    1. Push this commit with comment "waitForAngular test changes"
+    1. Push this commit with comment "waitForAngular test changes" [msfeature - waitForAngular test]
+    1. So now test waitForPace but triggered off of the pace.done event
+    1. Add feature step to lib/step_definitions/index.js
+    1. Add step code lib/step_definitions/ext/utility.js
+    1. Add method lib/driver/methods/waitForPace.js
+    1. Restart selenium: webdriver-manager start
+    1. Restart webserver: npm start
+    1. Run test: npm 
+    1. Push this commit with comment "waitForPace test changes" [msfeature - waitForPace test]
+    1. DEBUG stuff...
     1. next step
 
 ## General Structure and Principles
@@ -73,10 +82,11 @@ test/spec - the unit tests
 1. [msfeature] is a hack of [cucumber-mink] a fork of [community cucumber-mink] 
 1. [msfeature] uses [webdriver] to communicate over [JsonWireProtocol] to a [W3C browser]
 1. [msfeature] is driven by a feature text file in [cucumber] language
-1. [msfeature] contains [msDSL] a [cucumber-mink] extention example: [ 
+1. [msfeature] contains [msDSL] a [cucumber-mink] extention example: 
 
 [msfeature]: https://github.com/ctrees/msfeature
 [msfeature dev]: https://github.com/ctrees/msfeature/blob/master/READMEdev.md
+[msfeature - waitForAngular test]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
 [DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
 [Mail Services, LLC]: https://www.mailserviceslc.com/
 [istanbul]: http://gotwarlost.github.io/istanbul/

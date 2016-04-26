@@ -15,3 +15,10 @@ Feature: I can use cucumber to test an pace.js progress bar
     And I wait 4 seconds
     And the ".pace-progress-inner" element should not be visible
     And I wait 3 seconds
+
+  @wip
+  Scenario: Listen for pace events
+    When msPage is "loading"
+    Then the ".pace-progress-inner" element should be visible
+    When msPage is "done"
+    Then the ".pace-progress-inner" element should not be visible

@@ -85,6 +85,19 @@ test/spec - the unit tests
         1. added all pace events http://github.hubspot.com/pace/ to pace.swig for later reference
     1. Run test... that seems to work
     1. Push this commit with comment "waitForPace test working" [msfeature - waitForAngular working]
+1. Cleanup default testing setup
+    1. Change feature to 'msPageLoad ".pace" is done'
+    1. Update test/pace.feature for wording
+    1. Update lib/step_definitions/index.js for wording
+    1. Update test/runner.js to remove @wip filter and switch back to firefox, travis compatable.
+    1. Rerun tests to verify
+    1. CRAP... we have erros
+    1. In test/runner.js turn back on @wip to focus tests on the errors all in pace tests
+    1. So after hacking abit... I should have used Pace.on('hide'... not Pace.on('done'... if I want to test the the loadbar is not visable after things are done
+    1. Cleanup again...
+    1. Some lint issues with lib/driver/methods/waitForPace.js AND the 'hide' vs 'done' correction
+    1. Some timing issues with the old scenario test/features/pace.features
+    1. Now getting full clean runs
     1. next step
 
 ## General Structure and Principles
@@ -97,7 +110,7 @@ test/spec - the unit tests
 [msfeature]: https://github.com/ctrees/msfeature
 [msfeature dev]: https://github.com/ctrees/msfeature/blob/master/READMEdev.md
 [msfeature - waitForAngular test]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
-[msfeature - waitForAngular working]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
+[msfeature - waitForAngular working]: https://github.com/ctrees/msfeature/commit/e73941d92dbd16fefe0fc82d38e4648e2c42ea55
 [DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
 [Mail Services, LLC]: https://www.mailserviceslc.com/
 [istanbul]: http://gotwarlost.github.io/istanbul/

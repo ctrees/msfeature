@@ -28,8 +28,21 @@
         load(3100);
       });
     }, 3000);
+    // pace.js events http://github.hubspot.com/pace/
+    Pace.on('start', function(){
+      console.log('Pace start');
+    });
+    Pace.on('stop', function(){
+      console.log('Pace stop');
+    });
+    Pace.on('restart', function(){
+      console.log('Pace restart');
+    });
+    Pace.on('done', function(){
+      console.log('Pace done');
+    });
     Pace.on('hide', function(){
-      console.log('done');
+      console.log('Pace hide');
     });
   </script>
 </head>

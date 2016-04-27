@@ -74,7 +74,17 @@ test/spec - the unit tests
     1. Restart webserver: npm start
     1. Run test: npm 
     1. Push this commit with comment "waitForPace test changes" [msfeature - waitForPace test]
-    1. DEBUG stuff...
+    1. DEBUG stuff... so run with "DEBUG=* npm test"
+    1. We find that window.pace is not found
+    1. Go to http://localhost:3000/pace and open up devtools console and type window. 
+    1. We find it is Pace not pace... so correct that..
+    1. We find out it's looking for the selector passed in by the feature
+        1. Edit "done" to ".pace" in feature
+        1. Remove first mspage is feature check as the functions hooks onto the done event
+        1. added more event listeners in pace.swig with console comments
+        1. added all pace events http://github.hubspot.com/pace/ to pace.swig for later reference
+    1. Run test... that seems to work
+    1. Push this commit with comment "waitForPace test working" [msfeature - waitForAngular working]
     1. next step
 
 ## General Structure and Principles
@@ -87,6 +97,7 @@ test/spec - the unit tests
 [msfeature]: https://github.com/ctrees/msfeature
 [msfeature dev]: https://github.com/ctrees/msfeature/blob/master/READMEdev.md
 [msfeature - waitForAngular test]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
+[msfeature - waitForAngular working]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
 [DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
 [Mail Services, LLC]: https://www.mailserviceslc.com/
 [istanbul]: http://gotwarlost.github.io/istanbul/

@@ -18,7 +18,7 @@ Feature: I can use cucumber to test an pace.js progress bar
 
   @wip
   Scenario: Listen for pace events
-    When msPage is "loading"
+    #When msPage is "loading"
     Then the ".pace-progress-inner" element should be visible
-    When msPage is "done"
+    When msPage is ".pace"
     Then the ".pace-progress-inner" element should not be visible

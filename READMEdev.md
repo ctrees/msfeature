@@ -98,7 +98,26 @@ test/spec - the unit tests
     1. Some lint issues with lib/driver/methods/waitForPace.js AND the 'hide' vs 'done' correction
     1. Some timing issues with the old scenario test/features/pace.features
     1. Now getting full clean runs
-    1. next step
+    1. Push this commit with comment "waitForPace test working really" [msfeature - waitForAngular working really]
+1. npm msfeature version bump and release
+    1. [npm msfeature] I login as ctrees
+    1. cd ~/Code/msfeature
+    1. npm config ls -l
+    1. Verify user is set if not set it
+        1. npm set init.author.name "Chris Trees"
+        1. npm set init.author.email "ctrees@mailserviceslc.com"
+        1. npm set init.author.url "http://mailserviceslc.com"
+        1. npm adduser
+        1. Fill in requests from adduser with your npm account stuff
+    1. Bump the package.json version NOTE: should have done this when I began the changes
+        1. vi package.json -> "version": "0.0.2",
+        1. git add .
+        1. git commit -m "npm msfeature v0.0.2"
+        1. git tag 0.0.2
+        1. git push origin master --tags
+    1. npm publish
+    1. Now check [npm msfeature] it should have "0.0.2 is the latest release"
+1. next step
 
 ## General Structure and Principles
 1. The goal of [msfeature] is to create a [DSL] specific for [Mail Services, LLC]
@@ -111,6 +130,8 @@ test/spec - the unit tests
 [msfeature dev]: https://github.com/ctrees/msfeature/blob/master/READMEdev.md
 [msfeature - waitForAngular test]: https://github.com/ctrees/msfeature/commit/715027bafa66cf4b742486c4861a42841e934a69
 [msfeature - waitForAngular working]: https://github.com/ctrees/msfeature/commit/e73941d92dbd16fefe0fc82d38e4648e2c42ea55
+[msfeature - waitForAngular working really]: https://github.com/ctrees/msfeature/commit/05d3aa8371e71ad33c987fa1ad2465ff17079101
+[npm msfeature]: https://www.npmjs.com/package/msfeature
 [DSL]: https://en.wikipedia.org/wiki/Domain-specific_language
 [Mail Services, LLC]: https://www.mailserviceslc.com/
 [istanbul]: http://gotwarlost.github.io/istanbul/

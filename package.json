@@ -1,6 +1,6 @@
 {
   "name": "msfeature",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BDD feature testing for msDSL",
   "author": {
     "name": "Chris Trees",
